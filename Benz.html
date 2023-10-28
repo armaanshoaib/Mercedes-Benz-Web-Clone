@@ -1,0 +1,259 @@
+<!Doctype html>
+
+</html>
+
+<head>
+    <title>Mercedes Benz</title>
+    <style>
+        @font-face {
+            font-family: MB-Font;
+            src: url(MB-Font.ttf);
+        }
+
+        body {
+            font-family: MB-Font;
+        }
+
+        #logo-banner {
+            margin: fill;
+            text-align: center;
+            background-color: black;
+            border-radius: 10px;
+        }
+
+        #src-icon-div {
+            display: flex;
+            align-items: left;
+            justify-content: center;
+
+        }
+
+        #src-icon:hover {
+            background-color: gray;
+            border-radius: 4px;
+        }
+
+        #src-icon {
+            color: white;
+            font-size: 25px;
+            background-color: transparent;
+            border: transparent;
+            text-align: right;
+            height: 50px;
+            width: 50px;
+            padding-right: 13px;
+        }
+
+        #car-display {
+            display: inline-block;
+            margin-left: 60px;
+            height: 400px;
+            width: 300px;
+            background-color: rgb(38, 41, 43);
+            border-radius: 10px;
+        }
+
+        #bottom-banner {
+            background-color: black;
+            height: auto;
+            color: white;
+            border-radius: 7px;
+            height: 250px;
+            padding-bottom: 35px;
+        }
+            
+        #nearest-showroom{
+            display: flex;
+            height:80px;
+            width: 400px;
+            border-radius: 7px;
+            margin-top: 30px;
+            border-color: gray;
+            background-color: transparent;
+            flex-direction: row;
+        }
+        #text-in-btn{
+            display: flex;
+            flex-direction: column;
+        }
+        #text-in-btn:hover{
+            letter-spacing: 1px;      
+            transition: 0.2s;
+        }
+    </style>
+</head>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script type="text/javascript" src="map.js"></script>
+
+<body>
+    <div id="logo-banner">
+        <img style="text-align: center;" src="mb-logo.jpg" height="100px">
+        <div id="src-icon-div">
+            <button type="button" id="src-icon">
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div style="font-size: 40px; padding-left: 50px; padding-top: 50px; margin-right: 500px; ; ">All Models</div>
+        <div>
+            <button type="submit" id="nearest-showroom" onclick="openMap()"
+                href="https://www.google.com/maps/search/Mercedes-Benz/@17.3426984,78.3462429,12z/data=!3m1!4b1?entry=ttu"><ion-icon
+                    style="font-size: 35px; color: black; align-self: center;"
+                    name="location-outline"></ion-icon>
+                    <div id="text-in-btn" style="font-size: 18px; font-family: 'Segoe UI'; font-weight: bold; padding-left: 35px; align-content: center;">
+                    <p> Nearest Showroom </p> 
+                    <span style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; padding-left: 35px; color: gray; padding-right: 35px;">Find a Mercedes-Benz Dealer</apan>
+                                       
+                    </div>     
+            </button>
+        </div>
+    </div>
+    <u>
+        <p style="font-size: 30px; padding-left: 70px;height: 35px;">Limousine</p>
+    </u>
+    <div id="car-display">
+        <p style="font-size: 35px; color: white; padding-left: 15px;padding-top: 35px;justify-content: bottom;">EQS
+            Limousine</p>
+
+        <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹ 1,59,00,000.00
+        </p>
+        <img style="max-width:100%;
+        max-height:100%;" src="eqs-limo.png">
+
+    </div>
+
+    <div id="car-display">
+        <p style="font-size: 30px; color: white; padding-left: 15px;padding-top:15px;justify-content: bottom;">A-Class
+            Limousine AMG</p>
+        <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹ 58,00,000.00</p>
+        <img style="max-width:100%;
+        max-height:100%;" src="a-cls-limo-amg.png">
+    </div>
+
+    <div id="car-display">
+        <p style="font-size: 35px; color: white; padding-left: 15px;padding-top: 40px;justify-content: bottom;">A-Class
+            Limousine</p>
+        <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹ 42,80,000.00</p>
+        <img style="max-width:100%;
+        max-height:100%;" src="a-class-limo.png">
+    </div>
+
+    <div style="padding-top: 20px; display: inline-block;">
+        <div id="car-display">
+            <p style="font-size: 35px; color: white; padding-left: 15px;padding-top: 42px;">S-Class Limousine Long</p>
+            <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹
+                1,71,00,000.00</p>
+            <img style="max-width:100%;
+            max-height:100%;" src="a-class-limo.png">
+        </div>
+
+        <div id="car-display">
+            <p style="font-size: 35px; color: white; padding-left: 15px;">Mercedes-Maybach S-Class Limousine</p>
+            <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹
+                2,69,00,000.00</p>
+            <img style="max-width:100%;
+            max-height:100%;" src="a-class-limo.png">
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <p style="font-size: 30px; padding-left: 70px;height: 35px;">SUV Range</p>
+
+    <div id="car-display">
+        <p style="font-size: 35px; color: white; padding-left: 15px;padding-top: 35px;justify-content: bottom;">EQB</p>
+
+        <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹ 74,50,000.00 </p>
+
+        <img style="max-width:100%;
+        max-height:100%;" src="EQB.png">
+    </div>
+
+    <div id="car-display">
+        <p style="font-size: 35px; color: white; padding-left: 15px;padding-top: 35px;justify-content: bottom;">GLA</p>
+        <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹ 64,70,000.00 </p>
+        <img style="max-width:100%;
+        max-height:100%;" src="GLA.png">
+    </div>
+
+    <div id="car-display">
+        <p style="font-size: 35px; color: white; padding-left: 15px;padding-top: 35px;justify-content: bottom;">GLB</p>
+        <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹ 74,50,000.00 </p>
+        <img style="max-width:100%;
+        max-height:100%;" src="GLB.png">
+    </div>
+
+    <div style="padding-top: 20px; display: inline-block;">
+        <div id="car-display">
+            <p style="font-size: 35px; color: white; padding-left: 15px;padding-top: 42px;">GLE</p>
+            <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹ 91,20,000.00
+            </p>
+            <img style="max-width:100%;
+            max-height:100%;" src="GLE.png">
+        </div>
+
+        <div id="car-display">
+            <p style="font-size: 35px; color: white; padding-left: 15px;padding-top: 42px;">GLS</p>
+            <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹
+                1,30,80,000.00</p>
+            <img style="max-width:100%;
+            max-height:100%;" src="GLS.png">
+        </div>
+
+        <div id="car-display">
+            <p style="font-size: 35px; color: white; padding-left: 15px;padding-top: 2px;">Mercedes-Maybach GLS</p>
+            <p style="font-family: Arial;font-size: 15px;color: gray;padding-left: 20px;"> Starting from ₹
+                2,96,00,000.00</p>
+            <img style="max-width:100%;
+            max-height:100%;" src="MAYBACH-GLS.png">
+        </div>
+    </div>
+    <br><br><br><br>
+
+
+    <p style="font-family: 'Segoe UI'; font-size: 18px; padding-left: 50px;" ;>Legal disclaimers and annotations</p>
+    <hr style="width: 1100px; padding-left: 0px; margin-left: 50px;">
+    <div style="height: auto;">
+        <p style="font-family: 'Segoe UI'; font-size: 15px; color: gray; text-align: left; padding-left: 50px; padding-right: 60px;"
+            ;>The prices specified herein are indicative and may not be final. The
+            indicated price may differ due to purchase of any additional accessories, parts or products, services that
+            may be availed by the customer, discounts offered, change in government taxes, duties, fees or levies,
+            change of state of registration etc. Mercedes- Benz India or the Authorised Franchise Partner shall not be
+            responsible or liable to compensate for the difference in the prices due to aforesaid reasons or any reason
+            beyond the control of Mercedes-Benz India or the Authorised Franchise Partner. Actual colour of the vehicle
+            may differ from those shown in pictures. While Mercedes-Benz India tries to make sure that all information
+            provided herein is accurate, we shall not be responsible for typographical and other errors (e.g., data
+            transmission) that may appear on the site. If the posted price (including finance and lease payments) for a
+            vehicle is incorrect, 5C0 Mercedes-Benz India will endeavor to provide you with the correct prices as soon
+            as we
+            become aware of the error. In the event a vehicle is priced incorrectly, Mercedes-Benz India shall have the
+            right to refuse or cancel any orders placed for the vehicle presented with the incorrect price. In addition,
+            vehicle prices are subject to change and all vehicles are subject to prior sale and may not be available
+            when you are ready to purchase.
+        </p>
+    </div>
+
+
+    <div id="bottom-banner">
+        <p style="text-align: center; font-size: 25px; padding-top: 10px;">Contact Us</p>
+        <p style="text-align: center; font-size: 25px;">India Toll Free Number: 0008000501888</p>
+        <hr style="width: 1100px; text-align: center;">
+        <a href="https://www.facebook.com/MercedesBenzIndia"><ion-icon
+                style="font-size: 35px; padding-left: 35px; padding-top: 10px; color: white;"
+                name="logo-facebook"></ion-icon></a>
+        <a href="https://www.instagram.com/mercedesbenzind/"><ion-icon
+                style="font-size: 35px; padding-left: 35px; padding-top: 10px; color: white;"
+                name="logo-instagram"></ion-icon></a>
+        <a href="https://www.linkedin.com/company/mercedes-benz-india/"><ion-icon
+                style="font-size: 35px; padding-left: 35px; padding-top: 10px; color: white;"
+                name="logo-linkedin"></ion-icon></a>
+
+        <p style="font-size: 18px; font-family: sans-serif; color: gray; padding-left: 35px; padding-top: 35px;">© 2023.
+            Mercedes-Benz India Pvt. Ltd. All Rights Reserved (provider)</p>
+
+    </div>
+</body>
+
+</html>
