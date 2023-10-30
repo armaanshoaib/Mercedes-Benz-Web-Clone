@@ -4,6 +4,7 @@
 
 <head>
     <title>Mercedes Benz</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <style>
         @font-face {
             font-family: MB-Font;
@@ -25,12 +26,14 @@
             display: flex;
             align-items: left;
             justify-content: center;
+            
 
         }
 
         #src-icon:hover {
             background-color: gray;
             border-radius: 4px;
+            transition: 0.3s;
         }
 
         #src-icon {
@@ -42,6 +45,7 @@
             height: 50px;
             width: 50px;
             padding-right: 13px;
+            transition: 0.3s;
         }
 
         #car-display {
@@ -91,12 +95,19 @@
             height: 700px;
             width: 1170px;
         }
-        #welcome-text{
+        .welcome-text{
             position: absolute;
             font-size: 50px;
             top: 200px;
             color: aliceblue;
-            font-weight: 3px;            
+            font-weight: 3px;
+            animation-name: blktowht;
+            animation-duration: 4s            
+        }
+        @keyframes blktowht {
+            from {color: black;}
+            to {color: white;}           
+        
         }
     </style>
 </head>
@@ -117,8 +128,8 @@
 
     </div>
     <div id="welcome-banner">
-        <img src="welcome1.jpg" style="max-width: 100%; max-width: 100% ; border-radius: 7px; ">
-        <div id="welcome-text"><pre style="font-family: MB-Font; font-size: 70px;">
+        <img src="welcome1.png" style="max-width: 100%; max-width: 100% ; border-radius: 7px; ">
+        <div class="welcome-text"><pre style="font-family: MB-Font; font-size: 70px; ">
  Witness the VISION 
  Mercedes-
  Maybach 6
