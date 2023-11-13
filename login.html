@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-image: url('loginPage1.jpg');
+      background-size: 100% 110%;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    #login-title{
+      background-color: black;
+      color: white;
+      text-align: center;
+      height: 30px;
+      font-family: Segoe UI;
+      padding-top: 5px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      height: 70px;
+      margin: 5px 150px 5px 150px;
+      border-radius: 10%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #error-message {
+      color: red;
+      text-align: center;
+    }
+  </style>
+  <title>Mercedes Benz Login</title>
+</head>
+
+<body>
+  <div class="login-container">
+    <img src="mb-logo.jpg" alt="Mercedes Logo" class="logo">
+    <div id="login-title">Enter Your Details</div>    
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required placeholder="admin">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required placeholder="admin">
+
+      <button type="button" onclick="validateLogin()">Login</button>
+    </form>
+    <p id="error-message"></p>
+  </div>
+  <script type="text/javascript">
+    function validateLogin() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Simplified validation for demonstration purposes
+      if (username === "admin" && password === "admin") {
+        window.open("https://armaanshoaib.github.io/Mercedes-Benz-Web-Clone/","_self");
+      } else {
+        document.getElementById("error-message").innerText = "Username and password are 'admin' ";
+      }
+    }
+
+  </script>
+</body>
+
+</html>

@@ -30,8 +30,7 @@
         #src-icon-div {
             display: flex;
             align-items: left;
-            justify-content: center;
-            
+            justify-content: center;            
 
         }
 
@@ -116,22 +115,31 @@
         
         }
     </style>
+    <script type="text/javascript">
+    
+        function openMap(){
+    window.open("https://www.google.com/maps/search/Mercedes-Benz/@17.3426984,78.3462429,12z/data=!3m1!4b1?entry=ttu");
+    }
+    function openLoginPage(){
+        window.open("https://armaanshoaib.github.io/Mercedes-Benz-Web-Clone/EQB.png")
+    }
+
+    </script>
 </head>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script type="text/javascript" src="map.js"></script>
+
 
 <body>
     <div id="logo-banner">
         <img style="text-align: center;" src="mb-logo.jpg" height="100px">
-        <div id="src-icon-div">
-            <button type="button" id="src-icon">
-                <ion-icon name="search-outline"></ion-icon>
-            </button>
+        <div id="src-icon-div">            
+            <button type="submit" id="src-icon" onclick="openLoginPage()" >
+                <ion-icon name="log-in-outline"></ion-icon>
+            </button>      
         </div>
         <hr>
-        <p style="color: white; font-family: 'Segoe UI'; padding-bottom: 10px; font-size: 20px;"> Explore your dream Mercedes-Benz </p>
-
+        <p style="color: white; font-family: 'Segoe UI'; padding-bottom: 10px; font-size: 20px;"> Explore your dream Mercedes </p>
     </div>
     <div id="welcome-banner">
         <img src="welcome1.png" style="max-width: 100%; max-width: 100% ; border-radius: 7px; ">
