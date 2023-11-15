@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      background-image: url('loginPage1.jpg');
-      background-size: 100% 110%;
-      background-repeat: no-repeat;
+    body {     
+      background-image:url('loginpage.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center center;
+background-attachment: fixed;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -27,6 +29,8 @@
     }
 
     .login-container {
+      display: flex;
+      flex-direction: column;
       max-width: 400px;
       margin: 100px auto;
       padding: 20px;
@@ -34,8 +38,13 @@
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+    #mblogoid{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
 
-    .logo {
+    .mblogo {
       height: 70px;
       margin: 5px 150px 5px 150px;
       border-radius: 10%;
@@ -78,7 +87,9 @@
 
 <body>
   <div class="login-container">
-    <img src="mb-logo.jpg" alt="Mercedes Logo" class="logo">
+    <div id="mblogoid">
+    <img src="mb-logo.jpg" alt="Mercedes Logo" class="mblogo">
+  </div>
     <div id="login-title">Enter Your Details</div>    
     <form id="loginForm">
       <label for="username">Username:</label>
